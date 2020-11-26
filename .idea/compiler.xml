@@ -11,5 +11,9 @@
         <module name="cloud_server" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="excample_mod" target="1.5" />
+      <module name="untitled" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

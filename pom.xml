@@ -12,6 +12,7 @@
         <module>cloud_client</module>
         <module>cloud_common</module>
         <module>cloud_server</module>
+        <module>untitled</module>
     </modules>
 
     <properties>
