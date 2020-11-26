@@ -5,8 +5,8 @@ import java.awt.*;
 
 
 public class ClientGUI extends JFrame implements Thread.UncaughtExceptionHandler{
-    private static final int WIDTH = 600;
-    private static final int HEIGHT = 700;
+    private static final int WIDTH = 400;
+    private static final int HEIGHT = 500;
 
     private final JPanel panelTop = new JPanel(new GridLayout(1,3));
     private final JTextArea cloudLog = new JTextArea();
@@ -30,8 +30,8 @@ public class ClientGUI extends JFrame implements Thread.UncaughtExceptionHandler
     private ClientGUI(){
         Thread.setDefaultUncaughtExceptionHandler(this);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
-        setSize(WIDTH, HEIGHT);
+        setPreferredSize(new Dimension(WIDTH,HEIGHT));
+//        setSize(WIDTH, HEIGHT);
         setTitle(WINDOW_TITLE);
         cloudLog.setEditable(false);
         cloudLog.setLineWrap(true); // перенос строки в логе по ширине.
@@ -54,7 +54,8 @@ public class ClientGUI extends JFrame implements Thread.UncaughtExceptionHandler
         add(panelTop, BorderLayout.NORTH); // добавить панель наверх
         add(panelButton, BorderLayout.SOUTH);
 //        add(grdCenter, BorderLayout.CENTER);
-
+        pack();
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 
