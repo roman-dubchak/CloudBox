@@ -26,7 +26,6 @@ public class ClientGUI extends JFrame implements Thread.UncaughtExceptionHandler
 
 //    private final GridLayout grdCenter = new GridLayout(1,2);
 
-
     private ClientGUI(){
         Thread.setDefaultUncaughtExceptionHandler(this);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
