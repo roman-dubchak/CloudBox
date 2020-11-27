@@ -27,7 +27,8 @@ public class ServerGUI extends JFrame implements  Thread.UncaughtExceptionHandle
     private ServerGUI() {
         Thread.setDefaultUncaughtExceptionHandler(this);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setBounds(POS_X, POS_Y, WIDTH, HEIGHT);
+//        setBounds(POS_X, POS_Y, WIDTH, HEIGHT);
+        setPreferredSize(new Dimension(WIDTH, HEIGHT));
         setResizable(false);
         setTitle("Cloud server");
         setAlwaysOnTop(true);
@@ -40,6 +41,9 @@ public class ServerGUI extends JFrame implements  Thread.UncaughtExceptionHandle
         panelTop.add(btnStop);
         add(panelTop, BorderLayout.NORTH);
         add(scrollLog, BorderLayout.CENTER);
+
+        pack();
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 

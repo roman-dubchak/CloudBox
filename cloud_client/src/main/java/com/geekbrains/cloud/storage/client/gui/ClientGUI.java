@@ -1,4 +1,4 @@
-package com.geekbrains.cloud.storage.client;
+package com.geekbrains.cloud.storage.client.gui;
 
 import javax.swing.*;
 import java.awt.*;
